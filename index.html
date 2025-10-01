@@ -117,64 +117,7 @@ i {
 color: #000000;
    }
 
-  /* Custom styles for the Testimonial Card */
-.testimonial-card {
-    background-color: #fff; /* White background */
-    border-radius: 15px; /* Subtle rounding for the card */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Light shadow */
-    border: 1px solid #f0f0f0; /* Very light border */
-}
-
-/* Styling for the user image */
-.testimonial-img {
-    width: 90px; /* Set a specific size */
-    height: 90px;
-    object-fit: cover;
-    border-radius: 50%; /* Make it perfectly round */
-    border: 3px solid #f8f9fa; /* Optional: light border around image */
-}
-
-/* Custom styling for the indicators (the dots at the bottom) */
-.carousel-indicators {
-    position: static; /* Moves indicators below the carousel content */
-    margin-top: 2rem; 
-}
-
-/* Styling the individual indicator buttons */
-.carousel-indicators button {
-    width: 30px; /* Wider buttons */
-    height: 8px; /* Taller buttons */
-    border-radius: 4px; /* Slightly rounded edges */
-    background-color: #ccc; /* Default color (light gray) */
-    opacity: 1; /* Ensure they are visible */
-    margin: 0 5px;
-    transition: all 0.3s ease;
-}
-
-/* Styling for the active (current) indicator */
-.carousel-indicators .active {
-    background-color: #ff8c00; /* Use your orange brand color */
-    width: 45px; /* Make the active one a bit longer */
-}
-
-/* Styling the quotes to match the design's large orange quotes */
-.testimonial-quote-start,
-.testimonial-quote-end {
-    color: #ff8c00; /* Your specific orange color */
-    line-height: 0.5; /* Adjust to position the quote mark properly */
-    font-size: 3rem !important; /* Make them very large */
-}
-
-/* Helper class to position the start quote slightly higher */
-.testimonial-quote-start {
-    float: left;
-    margin-top: -10px;
-}
-/* Helper class to position the end quote slightly lower */
-.testimonial-quote-end {
-    float: right;
-    margin-bottom: -15px;
-}
+  
 .op{
             opacity: 1 !important;
             transition: .5s linear;
@@ -191,56 +134,433 @@ color: #000000;
   .hidden{
     display: none !important;
   }
+  /* ✅ Make site responsive without changing the look */
+@media (max-width: 1200px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar a {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+  .navbar button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 45px !important;
+  }
+  .profile {
+    width: 320px !important;
+    height: 320px !important;
+  }
+  .about img {
+    width: 320px !important;
+    height: 320px !important;
+  }
+  .ics div {
+    width: 45% !important;
+    margin-bottom: 20px;
+  }
+  .services .row {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .home h1, .home p {
+    text-align: center !important;
+  }
+  .testimonials {
+    left: 0 !important;
+    flex-direction: column !important;
+  }
+  .testimonials .card-about {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 32px !important;
+  }
+  p {
+    font-size: 16px !important;
+  }
+  .profile {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .ics div {
+    width: 100% !important;
+  }
+  .projects img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .projets .projet .img {
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+
+
+html {
+  font-size: 100%; /* 16px = 1rem */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+}
+
+/* Titres */
+h1 { font-size: 3rem; }   /* 48px */
+h2 { font-size: 2rem; }   /* 32px */
+h3 { font-size: 1.5rem; } /* 24px */
+p  { font-size: 1.125rem; } /* 18px */
+
+/* Images profil */
+.profile {
+  width: 22rem;   /* 352px */
+  height: 22rem;  /* 352px */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.2);
+}
+
+/* Sections */
+.section-padding {
+  padding: 3.75rem 0; /* 60px */
+}
+
+/* Services box */
+.services-box {
+  padding: 1.25rem; /* 20px */
+  border-radius: 0.5rem; /* 8px */
+  background: #fff;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  h1 { font-size: 2.5rem; } /* 40px */
+  h2 { font-size: 1.75rem; } /* 28px */
+  p  { font-size: 1rem; } /* 16px */
+  .profile {
+    width: 20rem; /* 320px */
+    height: 20rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 { font-size: 2rem; text-align: center; }
+  h2 { font-size: 1.5rem; text-align: center; }
+  p  { font-size: 0.9375rem; text-align: center; } /* 15px */
+  .profile {
+    width: 15.625rem; /* 250px */
+    height: 15.625rem;
+  }
+  .btnhire { justify-content: center; text-align: center;}
+}
+
+/* Default: light theme */
+body {
+  background: #fff;
+  color: #000;
+  }
+
+
+
+/* Dark theme */
+body.dark-theme {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-theme a {
+  color: #ddd;
+}
+
+a { color: black;}
+
+ul li a { color: #000000;}
+ 
+button, .btn {
+  background-color: #FD6F00;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #FD6F00;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: transparent;
+  color: #FD6F00 !important;
+  border-color: #FD6F00;
+}
+
+/* Dark theme button fix */
+body.dark-theme button, 
+body.dark-theme .btn {
+  background-color: #FD6F00;
+  color: #fff !important;
+  border: 2px solid #FD6F00;
+}
+
+body.dark-theme button:hover,
+body.dark-theme .btn:hover {
+  background-color: transparent;
+  color: #FD6F00 !important;
+}
+
+/* ✅ Center "Hire Me" button */
+#hireme-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* auto centers */
+  max-width: 200px;
+}
+
+/* Testimonials responsive */
+.testimonials {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonials .card-about {
+  width: 100%;
+  max-width: 350px; /* instead of 600px */
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials .card-about {
+    max-width: 90%;
+  }
+}
+
+/* Disable animations/transitions on small devices */
+@media (max-width: 768px) {
+  .testimonials,
+  .op,
+  .card-about,
+  .navbar,
+  .collapse,
+  button,
+  img,
+  .profile {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Default (light theme) */
+#p .btn {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#p .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Dark theme override */
+body.dark-theme #p .btn {
+  background-color: black;
+  color: white;
+  border: 2px solid white; /* contrast */
+}
+
+body.dark-theme #p .btn:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
     </style>
 </head>
-<>
+<body>
 <div class="container">
-  <div class="home">
+  <!-- <div class="home">
   <div class="row ">
   
 
     <div class="navbar">
       <a href="#"><img src="#" alt="photo"></a>
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#h">Home</a>
+        <a href="#a">About Me</a>
+        <a href="#s">Services</a>
+        <a href="#c">Contact</a>
         <a href="#p">Projects</a>
         <a href="#t">Testimonials</a>
-        <a href="#"><button > Download Cv</button></a>
+        <a href="#"><button  onclick="downloadpdf()"> Download Cv</button></a>
+        <script>
+function downloadpdf() {
+  const link = document.createElement('a');
+  link.href = "/cvtaha.pdf";   // chemin du PDF
+  link.download = "cvtaha.pdf"; // nom du fichier téléchargé
+  link.click();
+} -->
+<!-- </script> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+
+
+
+
+
+<!-- ✅ Navbar Bootstrap Responsive avec ancres courtes
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mon Portfolio</a>
+    
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+   
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#h">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#a">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#s">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#p">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c">Contact</a></li>
+      </ul>
+      
+      <button class="btn btn-outline-light ms-lg-3" onclick="downloadpdf()">Télécharger CV</button>
     </div>
+  </div>
+</nav>
+<script>
+function downloadpdf() {
+  const link = document.createElement('a');
+  link.href = "cvtaha.pdf";   // ton fichier PDF dans le même dossier
+  link.download = "cvtaha.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script> -->
+
+
+
+<!-- ✅ Navbar Bootstrap Responsive -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <!-- 🌙/☀️ Theme Toggle -->
+    <button class="btn  me-3"  id="themeToggle">Light Theme</button>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#h">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#a">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#s">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#p">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c">Contact</a></li>
+      </ul>
+      <!-- Download CV -->
+      <button class="btn ms-lg-3"  onclick="downloadpdf()">Download CV</button>
     </div>
+  </div>
+</nav>
+
+<script>
+document.getElementById("themeToggle").addEventListener("click", function() {
+  document.body.classList.toggle("dark-theme");
+  this.textContent = document.body.classList.contains("dark-theme") ? "Light Theme" : "Dark Theme";
+});
+
+function downloadpdf() {
+  const link = document.createElement('a');
+  link.href = "cvtaha.pdf"; 
+  link.download = "cvtaha.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+
+
+
+
+
+
 
   <div class="row m-5">  
  <div class="col-md-6 col-sm-12">
-    <div id="home" class="home">
+    <div id="h" class="home ">
       <p style="font-weight: 600;font-size: 24px;"> Hi I am</p>
       <p style="font-weight: 600; color: #FD6F00;font-size: 32px;"> Allilou Mohamed Taha</p>
-      <h1 style="font-weight:700 ;font-size: 70px; color: rgb(0, 0, 0);">Full stack</h1>
-       <p class=" text-end" style="font-weight: 700; font-size: 70px; color:rgb(0, 0, 0);">Developer</p>
+      <h1 style="font-weight:700 ;font-size: 70px; ">Full stack</h1>
+       <p class=" text-end" style="font-weight: 700; font-size: 70px; ">Developer</p>
       <p style="font-size: 21px;font-weight: 400;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci distinctio
          molestias expedita et dicta. Optio, accusantium. Molestiae illo, excepturi rem,
           facilis officiis iste, eius dolores facere neque doloribus assumenda nam!</p>
-      <button > Hire Me </button>
+          <div class="row col-sm-12 col-md-12 justify-content-center m-3 ">
+      <button id="c " > Hire Me </button>
+    </div>
     </div>
   </div>
 
-  <div class="col-md-6 col-sm-12">
-    <div class="d-flex justify-content-center">
-      <img src="8aeb1fc9979b379ab7f66745a5c557015bf995d5.png" alt="photo" class="img-fluid profile rounded-circle border border-3 border-dark" ><br>
+  <div class="col-md-6 col-sm-12 body.dark-theme">
+    <div class="d-flex justify-content-center align-items-center" style="padding-top: 10%;">
+      <img src="8aeb1fc9979b379ab7f66745a5c557015bf995d5.png" alt="photo" class="img-fluid profile rounded-circle border border-3 border-dark mt-3 "><br>
     </div>
     <div class="row mt-3">
       <div class="d-flex gap-3 justify-content-center mt-2">
-  <a href="https://www.facebook.com" target="_blank" class="text-decoration-none text-dark fs-3">
+  <a href="https://www.facebook.com" target="_blank" class="text-decoration-none fs-3">
     <i class="bi bi-facebook"></i>
   </a>
-  <a href="https://www.instagram.com" target="_blank" class="text-decoration-none text-dark fs-3">
+  <a href="https://www.instagram.com" target="_blank" class="text-decoration-none  fs-3">
     <i class="bi bi-instagram"></i>
   </a>
-  <a href="https://twitter.com" target="_blank" class="text-decoration-none text-dark fs-3">
+  <a href="https://twitter.com" target="_blank" class="text-decoration-none  fs-3">
     <i class="bi bi-twitter-x"></i>
   </a>
-  <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none text-dark fs-3">
+  <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none fs-3">
     <i class="bi bi-linkedin"></i>
   </a>
       </div>
@@ -248,16 +568,16 @@ color: #000000;
 
   </div>
   </div>
- </div>
  
  
- <div id="about" class="about mt-5 p-5">
+ 
+ <div id="a" class="about  mt-5 p-5">
   <div class="row">
-    <div class="col-6">
-      <img class="img-fluid profile rounded-circle border border-3 border-dark" src="6deab4e880f48cd1d9fa0014c092574df5520d15.png" alt="photo" style="width: 545px;height: 545px;">
+    <div class="col-6 justify-content-center" style="padding-top: 10%;">
+      <img class="img-fluid profile rounded-circle border border-3 border-dark" src="6deab4e880f48cd1d9fa0014c092574df5520d15.png" alt="photo" >
     </div>
     <div class="col-6 p-1 ">
-      <p style="font-weight: 600;font-size: 65px;color: #000000;">About Me</p>
+      <p style="font-weight: 600;font-size: 65px;">About Me</p>
     <p style="font-weight: 400;font-size: 21px; letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa 
       nibh lectus netus in. Aliquet d
       onec morbi convallis pretium. Turpis tempus pharetra</p>
@@ -286,7 +606,7 @@ color: #000000;
 </div>
 
 
-<div id="services" class="services  mt-5" >
+<div id="s" class="services  mt-5" >
   <div class="row mx-auto text-center w-75">
     <p style="font-weight: 600;font-size: 65px;letter-spacing: 3%;" >Services</p>
     <p style="font-weight: 400;font-size: 21px;letter-spacing: 3%;" >Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
@@ -294,7 +614,9 @@ color: #000000;
   </div>
   <div class="row mt-5 g-3 ics">
     <div class="col-3 bg-light rounded mx-auto p-3">
-      <i class="bi bi-code-slash " ></i>
+      <div class="text-center">
+      <i class="bi bi-code-slash justify-content-center" ></i>
+      </div>
       <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Html / css</p>
       <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
     </div>
@@ -357,9 +679,9 @@ color: #000000;
 
 <article id="t" class="scale d-flex flex-column justify-content-center align-items-center mt-5">
             <h1 class="my-3 font-weight-bold">Testimonials</h1>
-            <p class="w-75 text-center" style="font-size: 14px;font-weight: 500;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
-            <div class=" testimonials d-flex justify-content-center align-items-center my-4" style="gap: 20px; ">
-                <div class="op card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+            <p class="w-75 text-center" style="font-size: 14px;font-weight: 500; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
+            <div class=" testimonials d-flex justify-content-center align-items-center my-3" style="gap: 20px; ">
+                <div class="op card-about d-flex justify-content-center align-items-center p-3" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
                     <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px; " alt="">
                     <div class="text d-flex flex-column">
                         <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
@@ -367,7 +689,7 @@ color: #000000;
                         <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
                     </div>
                 </div>
-                <div class="  card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+                <div class="  card-about d-flex justify-content-center align-items-center p-3" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
                     <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
                     <div class="text d-flex flex-column">
                         <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
@@ -375,29 +697,26 @@ color: #000000;
                         <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
                     </div>
                 </div>
-                <div class=" card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
-                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
+                <div class=" card-about d-flex justify-content-center align-items-center p-3" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+                  <div class="row">
+                  <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
+                    </div>  
                     <div class="text d-flex flex-column">
+                      <div class="row">
                         <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
                         <h6 class="mb-0 pb-0">Name</h6>
                         <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
+                        </div>
                     </div>
                 </div>
-                <div class=" card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
-                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
-                    <div class="text d-flex flex-column">
-                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
-                        <h6 class="mb-0 pb-0">Name</h6>
-                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
-                    </div>
-                </div>
+                
             </div>
             
             <div class="scroll d-flex" style="gap: 5px;">
               <div class="down clicked" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
               <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
               <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
-              <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
+              
             </div>
           </article>
         
@@ -493,7 +812,7 @@ color: #000000;
                 
             </div>
           </aside>
-        <div id="contact" class=" d-flex flex-column justify-content-center align-items-center mt-5">
+        <div id="c" class=" d-flex flex-column justify-content-center align-items-center mt-5">
             <h1 class="my-3 font-weight-bold mt-5">Lets Design Together</h1>
             <p class="w-75 text-center mb-5" style="font-size: 14px;font-weight: 500;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
             <form action="" class="scal d-flex w-100 container justify-content-center align-items-center mb-5" style="gap: 20px;"> 
@@ -510,13 +829,13 @@ color: #000000;
       </div>
 
       <nav class="">
-        <ul class="nav mb-5" style="font-size: 13px;">
-            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#h">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#a">About</a></li>
-            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#s">Service</a></li>
-            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#p">Projects</a></li>
-            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#t">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#c">Contact</a></li>
+        <ul class="nav mb-5 d-flex justify-content-center" style="font-size: 13px;">
+            <li class="nav-item"><a class="nav-link font-weight-normal" href="#h">Home</a></li>
+            <li class="nav-item"><a class="nav-link font-weight-normal" href="#a">About</a></li>
+            <li class="nav-item"><a class="nav-link font-weight-normal" href="#s">Service</a></li>
+            <li class="nav-item"><a class="nav-link font-weight-normal" href="#p">Projects</a></li>
+            <li class="nav-item"><a class="nav-link font-weight-normal" href="#t">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link font-weight-normal" href="#c">Contact</a></li>
         </ul>
       </nav>
       <div class="icons d-flex justify-content-around mb-5" style="gap: 20px;">
@@ -627,6 +946,6 @@ async function animation() {
 
 
 
-
+</div>
 </body>
 </html>
