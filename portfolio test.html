@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+      *{font-family: "poppins" , sans-serif;
+      }
+        .navbar {
+          color: black;
+            margin: auto;
+      overflow: hidden;
+      display: flex;
+      padding: 10px 20px;
+      font-weight: 400;
+      font-size: 21px;
+      
+      
+    }
+
+    .navbar a img {
+     height: 40px;
+      width: auto;  
+    }
+
+    button {
+      background-color: #FD6F00;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border-color: white;
+      
+
+    }
+
+    button:hover{
+      background-color: rgb(255, 255, 255);
+      color: #FD6F00;
+      border-color: #FD6F00;
+      border-radius: 10px;
+    }
+    .navbar a {
+      margin: auto;
+      color:black;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .profile {
+      width: 485px;
+      height: 485px;}
+
+    label {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    input[type-range] {
+       background-color: #FD6F00;
+       width: 100%;
+       border-radius: 5px;
+      }
+      .progress{
+        height: 5px;
+        background-color: #e5e5e5;
+        position: relative;
+         overflow: visible;
+        }
+.progress-bar{
+  background-color: #ff8233;
+  height: 8px;
+  border-radius: 10px;
+  position: relative;
+  overflow: visible; 
+  z-index: 1;  
+}
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  right: -14px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: #fff;    ;   
+  border: 2px solid #ff8233; 
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+    z-index: 2;  
+}
+i {
+  font-size: 32px;
+  padding: 5px;
+}
+.services i { color: #FD6F00;}
+.ics i{
+  font-size: 80px;
+  font-weight: 500;
+}
+.ics div{ width: 23%;}
+.projects button { background-color: #F8F8F8;
+    font-size: 24px;
+  font-weight:400 ;
+  letter-spacing: 3%;
+color: #000000;
+   }
+
+  /* Custom styles for the Testimonial Card */
+.testimonial-card {
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Subtle rounding for the card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Light shadow */
+    border: 1px solid #f0f0f0; /* Very light border */
+}
+
+/* Styling for the user image */
+.testimonial-img {
+    width: 90px; /* Set a specific size */
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%; /* Make it perfectly round */
+    border: 3px solid #f8f9fa; /* Optional: light border around image */
+}
+
+/* Custom styling for the indicators (the dots at the bottom) */
+.carousel-indicators {
+    position: static; /* Moves indicators below the carousel content */
+    margin-top: 2rem; 
+}
+
+/* Styling the individual indicator buttons */
+.carousel-indicators button {
+    width: 30px; /* Wider buttons */
+    height: 8px; /* Taller buttons */
+    border-radius: 4px; /* Slightly rounded edges */
+    background-color: #ccc; /* Default color (light gray) */
+    opacity: 1; /* Ensure they are visible */
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for the active (current) indicator */
+.carousel-indicators .active {
+    background-color: #ff8c00; /* Use your orange brand color */
+    width: 45px; /* Make the active one a bit longer */
+}
+
+/* Styling the quotes to match the design's large orange quotes */
+.testimonial-quote-start,
+.testimonial-quote-end {
+    color: #ff8c00; /* Your specific orange color */
+    line-height: 0.5; /* Adjust to position the quote mark properly */
+    font-size: 3rem !important; /* Make them very large */
+}
+
+/* Helper class to position the start quote slightly higher */
+.testimonial-quote-start {
+    float: left;
+    margin-top: -10px;
+}
+/* Helper class to position the end quote slightly lower */
+.testimonial-quote-end {
+    float: right;
+    margin-bottom: -15px;
+}
+.op{
+            opacity: 1 !important;
+            transition: .5s linear;
+        }
+        .testimonials{
+            position: relative;
+            left: 900px;
+            transition: 1s linear;
+        }
+ .clicked{
+    background: #ff6300 !important;
+    color: white !important;
+ }
+  .hidden{
+    display: none !important;
+  }
+    </style>
+</head>
+<>
+<div class="container">
+  <div class="home">
+  <div class="row ">
+  
+
+    <div class="navbar">
+      <a href="#"><img src="#" alt="photo"></a>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#p">Projects</a>
+        <a href="#t">Testimonials</a>
+        <a href="#"><button > Download Cv</button></a>
+    </div>
+    </div>
+
+  <div class="row m-5">  
+ <div class="col-md-6 col-sm-12">
+    <div id="home" class="home">
+      <p style="font-weight: 600;font-size: 24px;"> Hi I am</p>
+      <p style="font-weight: 600; color: #FD6F00;font-size: 32px;"> Allilou Mohamed Taha</p>
+      <h1 style="font-weight:700 ;font-size: 70px; color: rgb(0, 0, 0);">Full stack</h1>
+       <p class=" text-end" style="font-weight: 700; font-size: 70px; color:rgb(0, 0, 0);">Developer</p>
+      <p style="font-size: 21px;font-weight: 400;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci distinctio
+         molestias expedita et dicta. Optio, accusantium. Molestiae illo, excepturi rem,
+          facilis officiis iste, eius dolores facere neque doloribus assumenda nam!</p>
+      <button > Hire Me </button>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <div class="d-flex justify-content-center">
+      <img src="8aeb1fc9979b379ab7f66745a5c557015bf995d5.png" alt="photo" class="img-fluid profile rounded-circle border border-3 border-dark" ><br>
+    </div>
+    <div class="row mt-3">
+      <div class="d-flex gap-3 justify-content-center mt-2">
+  <a href="https://www.facebook.com" target="_blank" class="text-decoration-none text-dark fs-3">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com" target="_blank" class="text-decoration-none text-dark fs-3">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="text-decoration-none text-dark fs-3">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none text-dark fs-3">
+    <i class="bi bi-linkedin"></i>
+  </a>
+      </div>
+    </div>
+
+  </div>
+  </div>
+ </div>
+ 
+ 
+ <div id="about" class="about mt-5 p-5">
+  <div class="row">
+    <div class="col-6">
+      <img class="img-fluid profile rounded-circle border border-3 border-dark" src="6deab4e880f48cd1d9fa0014c092574df5520d15.png" alt="photo" style="width: 545px;height: 545px;">
+    </div>
+    <div class="col-6 p-1 ">
+      <p style="font-weight: 600;font-size: 65px;color: #000000;">About Me</p>
+    <p style="font-weight: 400;font-size: 21px; letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa 
+      nibh lectus netus in. Aliquet d
+      onec morbi convallis pretium. Turpis tempus pharetra</p>
+      <label for="ux">UX</label><br>
+      <div class="progress mt-2">
+        <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+      </div>
+      <br>
+      <label for="design">Design</label><br>
+      <div class="progress mt-2">
+        <div class="progress-bar" role="progressbar" style="width: 70%;"></div>
+      </div>
+      <br>
+      <label for="appdesign">App Design</label><br>
+      <div class="progress mt-2">
+        <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+      </div>
+      <br>
+      <label for="graphicdesign" >Graphic Design</label><br>
+      <div class="progress mt-2">
+        <div class="progress-bar" role="progressbar" style="width: 80%;"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="services" class="services  mt-5" >
+  <div class="row mx-auto text-center w-75">
+    <p style="font-weight: 600;font-size: 65px;letter-spacing: 3%;" >Services</p>
+    <p style="font-weight: 400;font-size: 21px;letter-spacing: 3%;" >Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
+    
+  </div>
+  <div class="row mt-5 g-3 ics">
+    <div class="col-3 bg-light rounded mx-auto p-3">
+      <i class="bi bi-code-slash " ></i>
+      <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Html / css</p>
+      <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+    </div>
+    <div class="col-3 bg-light rounded mx-auto p-3">
+      <i class="bi bi-database " ></i>
+      <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Data base</p>
+      <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+    </div>
+    <div class="col-3 bg-light rounded mx-auto p-3">
+      <i class="bi bi-filetype-js " ></i>
+      <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Java script</p>
+      <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+    </div>
+    <div class="col-3 bg-light rounded  mx-auto p-3">
+      <i class="bi bi-filetype-php  " ></i>
+      <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Php </p>
+      <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="mt-5 projects">
+  <p style="font-weight:600 ; font-size: 65px; letter-spacing: 3%;" class="text-center">My projects</p>
+  <p style="font-weight: 400;font-size: 21px; letter-spacing: 3%;" class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus</p>
+  <div class="row  d-flex mt-5 text-center justify-content-evenly mx-5 espacebtn">
+    <div class="col-2 ">
+      <button id="projectbtn" > All </button>
+    </div>
+    <div class="col-2">
+      <button id="projectbtn" > Html/Css </button>
+    </div>
+    <div class="col-2">
+      <button id="projectbtn" > Data base </button>
+    </div>
+    <div class="col-2">
+      <button id="projectbtn" > Php </button>
+    </div>
+    <div class="col-2">
+      <button id="projectbtn" > Java script </button>
+    </div>
+  </div>
+  <div class="row mt-5 d-flex  justify-content-between  gap-5">
+    <div class="col-3">
+      <img src="Capture d’écran 2025-09-30 182245.png" alt="web design" style="height: 489px;width: 445px;">
+    </div>
+    <div class="col-3">
+      <img src="Capture d’écran 2025-09-30 182316.png" alt="web design" style="height: 489px;width: 445px;">
+    </div>
+    <div class="col-3">
+      <img src="Capture d’écran 2025-09-30 182707.png" alt="web design" style="height: 489px; width: 445px;">
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<article id="t" class="scale d-flex flex-column justify-content-center align-items-center mt-5">
+            <h1 class="my-3 font-weight-bold">Testimonials</h1>
+            <p class="w-75 text-center" style="font-size: 14px;font-weight: 500;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
+            <div class=" testimonials d-flex justify-content-center align-items-center my-4" style="gap: 20px; ">
+                <div class="op card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px; " alt="">
+                    <div class="text d-flex flex-column">
+                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
+                        <h6 class="mb-0 pb-0">Name</h6>
+                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
+                    </div>
+                </div>
+                <div class="  card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
+                    <div class="text d-flex flex-column">
+                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
+                        <h6 class="mb-0 pb-0">Name</h6>
+                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
+                    </div>
+                </div>
+                <div class=" card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
+                    <div class="text d-flex flex-column">
+                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
+                        <h6 class="mb-0 pb-0">Name</h6>
+                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
+                    </div>
+                </div>
+                <div class=" card-about d-flex justify-content-center align-items-center p-4" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
+                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
+                    <div class="text d-flex flex-column">
+                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
+                        <h6 class="mb-0 pb-0">Name</h6>
+                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll d-flex" style="gap: 5px;">
+              <div class="down clicked" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
+              <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
+              <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
+              <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
+            </div>
+          </article>
+        
+
+
+
+
+        
+
+<article id="p" class="container d-flex flex-column justify-content-center align-items-center mt-5">
+            <h1 class="my-3 font-weight-bold">My Projets</h1>
+            <p class="w-75 text-center" style="font-size: 14px;font-weight: 500;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
+            <div class="group-link d-flex justify-content-center align-items-center  my-4" style="flex-wrap: wrap;">
+                <button onclick="Projects(this)" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">All</button>
+                <button onclick="Projects(this,[0,1,2])" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">UI/UX</button>
+                <button onclick="Projects(this,[3,4,5])" class="btn rounded my-1 mx-1 border border-2 clicked" style="background: #f5f5f5; border-radius: 10px !important;">Web Design</button>
+                <button onclick="Projects(this,[6,7,8])" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">App Design</button>
+                <button onclick="Projects(this,[0,5,2])" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">Graphic Design</button>
+            </div>
+            <div class="projets row mt-4" style="gap: 30px;">
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3 mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="aa.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="a.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3  d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="aa.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="a.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3  d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="a.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="aa.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3 d-block  mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="a.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="aa.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3 d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="c.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="cc.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3  d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="c.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="cc.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3  d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="b.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="bb.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3  d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="bb.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="b.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                <div class="projet col-8 col-sm-6 col-md-4 col-lg-3  d-block mx-auto">
+                    <div class="img" style="width: 280px; position: relative; background: #ffefe6; height: 300px; border-radius: 10px;">
+                    <img src="b.jpeg" class="position-absolute" style="height: 100%; width: 60%; top: 0;right: 15px;" alt="">
+                    <img src="bb.jpeg" class="position-absolute" style="height: 85%; width: 60%;bottom: 0;left: 20px;" alt="">
+                    </div>
+                    <span class="align-self-start my-1" style="font-size: 13px; color: #ff6300;">Web Design</span>
+                    <p class="align-self-start font-weight-bold">AirColling Landing Page Design</p>
+                </div>
+                
+            </div>
+          </aside>
+        <div id="contact" class=" d-flex flex-column justify-content-center align-items-center mt-5">
+            <h1 class="my-3 font-weight-bold mt-5">Lets Design Together</h1>
+            <p class="w-75 text-center mb-5" style="font-size: 14px;font-weight: 500;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
+            <form action="" class="scal d-flex w-100 container justify-content-center align-items-center mb-5" style="gap: 20px;"> 
+                <input class="p-2 w-50" style="background: #f3f3f3; border: 2px solid #dddddd; border-radius: 10px;outline: none;" type="text" name="email" id="emailinp" placeholder="Enter Your Email">
+                <button onclick="Annoncer()" class="p-2 px-4 text-light" style="border: none; border-radius: 10px; background: #ff6300; border: 2px solid #ff6300;outline: none; cursor: pointer;" type="button">Contact Me</button>
+            </form>
+            </div>
+            </article>
+            </div>
+        <footer style="background: #fafafa;" class="pt-5 w-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="logo">
+        <!-- <h4 style="color: #8a8a8a;" class="font-weight-bold">FAWZIUIUX</h4> -->
+         <img src="../image/icon.png" alt="" style="width: 200px;">
+      </div>
+
+      <nav class="">
+        <ul class="nav mb-5" style="font-size: 13px;">
+            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#h">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#a">About</a></li>
+            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#s">Service</a></li>
+            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#p">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#t">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link text-dark font-weight-normal" href="#c">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons d-flex justify-content-around mb-5" style="gap: 20px;">
+                    <i class="bi bi-facebook h5"></i>
+                    <i class="bi bi-twitter h5"></i>
+                    <i class="bi bi-instagram h5"></i>
+                    <i class="bi bi-linkedin h5"></i>
+        </div>
+        <div class="copyright text-center text-light w-100" style="background: #545454;">
+            <p class="p-1 m-0">
+                2023
+                <span class="m-0 p-0" style="color: #ff6300;font-weight: 700; font-size: 16px;">FawziUiUx</span>
+                All Rights Reserved , Inc
+            </p>
+        </div>
+    </footer>
+        <script>function Projects(btn ,elements = [0,1,2,3,4,5,6,7,8,0,5,2]) {
+        if (btn) {
+            document.querySelectorAll('.btn').forEach(b => {
+            b.classList.remove('clicked');
+        });
+        btn.classList.add('clicked');
+        }
+        let projets =  document.querySelectorAll('.projet');
+        projets.forEach(p => {
+          if (!p.classList.contains("hidden")) {
+            p.classList.add("hidden");
+            console.log(1);
+            }
+            
+        });
+        elements.forEach(index => {
+            
+            if (projets[index] ) {
+                projets[index].classList.remove('hidden');
+                p.classList.add("d-block");
+                    
+                }
+            });
+    }Projects(false ,[3,4,5])</script>
+
+
+ 
+        <script>
+          let testimonials = document.querySelector('.testimonials') ;
+        // let down = document.querySelectorAll('.down') ;
+       function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+function repet() {
+    let innow = document.querySelector('.down.clicked');
+    innow.classList.remove('clicked')
+    innow.nextElementSibling.classList.add('clicked') ; 
+    let o = document.querySelector(".op");
+   
+    o.classList.remove("op")
+    // o.style.opacity = 0.3;
+    o.nextElementSibling.classList.add('op');
+    // o.nextElementSibling.style.opacity = 1;
+    
+}
+async function animation() {
+    await delay(2000);
+    repet()
+    testimonials.style.left = '300px' ;
+    await delay(2000);
+    repet()
+    testimonials.style.left = '-300px' ;
+    await delay(2000);
+    repet()
+    testimonials.style.left = '-900px' ;
+    await delay(2000);
+    document.querySelector('.down.clicked').classList.remove('clicked')
+    document.querySelector('.down').classList.add('clicked') ;  
+    testimonials.style.left = '900px' ;
+    document.querySelector(".op").classList.remove('op');
+    document.querySelector('.card-about').classList.add('op')
+    animation()
+}animation()
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
