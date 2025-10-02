@@ -379,6 +379,9 @@ body.dark-theme .btn:hover {
     transition: none !important;
     animation: none !important;
   }
+  .imgab { display: none;}
+  #a { margin-top: 0%;}
+  
 }
 
 /* Default (light theme) */
@@ -397,6 +400,7 @@ body.dark-theme .btn:hover {
 
 /* Dark theme override */
 body.dark-theme #p .btn {
+
   background-color: black;
   color: white;
   border: 2px solid white; /* contrast */
@@ -407,6 +411,14 @@ body.dark-theme #p .btn:hover {
   color: black;
   border-color: white;
 }
+
+.sbox {color: black; }
+
+.sbox:hover {border-color: #FD6F00 !important; }
+
+.wthemefooter{ col}
+
+
 
     </style>
 </head>
@@ -486,9 +498,9 @@ function downloadpdf() {
     <button class="btn  me-3"  id="themeToggle">Light Theme</button>
 
     <!-- Hamburger -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler text-center p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FD6F00;" >
+      <span class="bi bi-chevron-bar-down text-center clrnav" ></span>
     </button>
 
     <!-- Links -->
@@ -540,7 +552,7 @@ function downloadpdf() {
          molestias expedita et dicta. Optio, accusantium. Molestiae illo, excepturi rem,
           facilis officiis iste, eius dolores facere neque doloribus assumenda nam!</p>
           <div class="row col-sm-12 col-md-12 justify-content-center m-3 ">
-      <button id="c " > Hire Me </button>
+      <button id="" > Hire Me </button>
     </div>
     </div>
   </div>
@@ -573,10 +585,10 @@ function downloadpdf() {
  
  <div id="a" class="about  mt-5 p-5">
   <div class="row">
-    <div class="col-6 justify-content-center" style="padding-top: 10%;">
-      <img class="img-fluid profile rounded-circle border border-3 border-dark" src="6deab4e880f48cd1d9fa0014c092574df5520d15.png" alt="photo" >
+    <div class="col-md-6 col-sm-0 dvabt justify-content-center" style="padding-top: 10%;">
+      <img class="img-fluid profile rounded-circle border border-3 border-dark imgab" src="6deab4e880f48cd1d9fa0014c092574df5520d15.png" alt="photo" >
     </div>
-    <div class="col-6 p-1 ">
+    <div class="col-md-6 col-sm-12 p-1 ">
       <p style="font-weight: 600;font-size: 65px;">About Me</p>
     <p style="font-weight: 400;font-size: 21px; letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa 
       nibh lectus netus in. Aliquet d
@@ -613,25 +625,31 @@ function downloadpdf() {
     
   </div>
   <div class="row mt-5 g-3 ics">
-    <div class="col-3 bg-light rounded mx-auto p-3">
+    <div class="col-3 bg-light sbox rounded sbox mx-auto p-3">
       <div class="text-center">
       <i class="bi bi-code-slash justify-content-center" ></i>
       </div>
       <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Html / css</p>
       <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
     </div>
-    <div class="col-3 bg-light rounded mx-auto p-3">
-      <i class="bi bi-database " ></i>
+    <div class="col-3 bg-light sbox rounded mx-auto p-3">
+      <div class="text-center">
+      <i class="bi bi-database justify-content-center" ></i>
+      </div>
       <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Data base</p>
       <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
     </div>
-    <div class="col-3 bg-light rounded mx-auto p-3">
-      <i class="bi bi-filetype-js " ></i>
+    <div class="col-3 bg-light sbox rounded mx-auto p-3">
+      <div class="text-center">
+      <i class="bi bi-filetype-js justify-content-center" ></i>
+      </div>
       <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Java script</p>
       <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
     </div>
-    <div class="col-3 bg-light rounded  mx-auto p-3">
-      <i class="bi bi-filetype-php  " ></i>
+    <div class="col-3 bg-light sbox rounded  mx-auto p-3">
+      <div class="text-center">
+      <i class="bi bi-filetype-php  justify-content-center" ></i>
+      </div>
       <p style="font-size: 32px;font-weight: 600;letter-spacing: 3%;">Php </p>
       <p style="font-weight: 400;font-size: 19px;letter-spacing: 3%;">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
     </div>
@@ -677,48 +695,7 @@ function downloadpdf() {
 
 
 
-<article id="t" class="scale d-flex flex-column justify-content-center align-items-center mt-5">
-            <h1 class="my-3 font-weight-bold">Testimonials</h1>
-            <p class="w-75 text-center" style="font-size: 14px;font-weight: 500; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
-            <div class=" testimonials d-flex justify-content-center align-items-center my-3" style="gap: 20px; ">
-                <div class="op card-about d-flex justify-content-center align-items-center p-3" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
-                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px; " alt="">
-                    <div class="text d-flex flex-column">
-                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
-                        <h6 class="mb-0 pb-0">Name</h6>
-                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
-                    </div>
-                </div>
-                <div class="  card-about d-flex justify-content-center align-items-center p-3" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
-                    <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
-                    <div class="text d-flex flex-column">
-                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
-                        <h6 class="mb-0 pb-0">Name</h6>
-                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
-                    </div>
-                </div>
-                <div class=" card-about d-flex justify-content-center align-items-center p-3" style="background: #f3f3f3; border-radius: 10px; gap: 10px; width: 600px;opacity: 0.3;">
-                  <div class="row">
-                  <img src="6c9751a2-8410-4142-a0a5-3cdf59e34435-removebg-preview (1).png" class="img-fluid profile rounded-circle border border-3 border-dark" style="width: 150px;height: 150px;" alt="">
-                    </div>  
-                    <div class="text d-flex flex-column">
-                      <div class="row">
-                        <p class="p-0 m-0 mb-2 text-justify " style="font-size: 14px;"><sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt ipsum, delectus corporis aliquam deserunt harum dolorem quaerat totam, quos fuga praesentium nobis eos provident voluptatem quidem ut ullam.<sub style="color: #ff6300; font-weight: 800; font-size: 18px;">"</sub></p>
-                        <h6 class="mb-0 pb-0">Name</h6>
-                        <p style="font-size: 13px;" class="p-0 m-0">CEO</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="scroll d-flex" style="gap: 5px;">
-              <div class="down clicked" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
-              <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
-              <div class="down" style="background: #dddddd; height: 10px; border-radius:20px; width: 35px;"></div>
-              
-            </div>
-          </article>
+
         
 
 
@@ -727,14 +704,14 @@ function downloadpdf() {
         
 
 <article id="p" class="container d-flex flex-column justify-content-center align-items-center mt-5">
-            <h1 class="my-3 font-weight-bold">My Projets</h1>
+            <h1 class="my-3 font-weight-bold">My Projects</h1>
             <p class="w-75 text-center" style="font-size: 14px;font-weight: 500;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium voluptate non. Eius, corporis vel ipsam quidem impedit illum.</p>
             <div class="group-link d-flex justify-content-center align-items-center  my-4" style="flex-wrap: wrap;">
-                <button onclick="Projects(this)" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">All</button>
-                <button onclick="Projects(this,[0,1,2])" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">UI/UX</button>
-                <button onclick="Projects(this,[3,4,5])" class="btn rounded my-1 mx-1 border border-2 clicked" style="background: #f5f5f5; border-radius: 10px !important;">Web Design</button>
-                <button onclick="Projects(this,[6,7,8])" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">App Design</button>
-                <button onclick="Projects(this,[0,5,2])" class="btn rounded my-1 mx-1 border border-2" style="background: #f5f5f5; border-radius: 10px !important;">Graphic Design</button>
+                <button onclick="Projects(this)" class="btn rounded my-1 mx-1 border border-2 sbox" style="background: #f5f5f5; border-radius: 10px !important;"><e btnhv style="color: black;">All</e></button>
+                <button onclick="Projects(this,[0,1,2])" class="btn rounded my-1 mx-1 border border-2 sbox  " style="background: #f5f5f5; border-radius: 10px !important;"><e btnhv style="color: black;">  UI/UX</e></button>
+                <button onclick="Projects(this,[3,4,5])" class="btn rounded my-1 mx-1 border border-2 sbox clicked" style="background: #f5f5f5; border-radius: 10px !important;"><e btnhv style="color: black;">Web Design</e></button>
+                <button onclick="Projects(this,[6,7,8])" class="btn rounded my-1 mx-1 border border-2 sbox" style="background: #f5f5f5; border-radius: 10px !important;"><e btnhv style="color: black;"> App Design</e></button>
+                <button onclick="Projects(this,[0,5,2])" class="btn rounded my-1 mx-1 border border-2 sbox" style="background: #f5f5f5 ; border-radius: 10px !important; color: black;"><e class="btnhv" style="color: black;">Graphic Design</e></button>
             </div>
             <div class="projets row mt-4" style="gap: 30px;">
                 <div class="projet col-8 col-sm-6 col-md-4 col-lg-3 mx-auto">
@@ -822,14 +799,14 @@ function downloadpdf() {
             </div>
             </article>
             </div>
-        <footer style="background: #fafafa;" class="pt-5 w-100 d-flex flex-column justify-content-center align-items-center">
+        <footer style="background: #fafafa;" class="pt-5 w-100 h-75 d-flex flex-column justify-content-center align-items-center">
         <div class="logo">
         <!-- <h4 style="color: #8a8a8a;" class="font-weight-bold">FAWZIUIUX</h4> -->
          <img src="../image/icon.png" alt="" style="width: 200px;">
       </div>
 
       <nav class="">
-        <ul class="nav mb-5 d-flex justify-content-center" style="font-size: 13px;">
+        <ul class="nav mb-5 d-flex justify-content-center wthemefooter" style="font-size: 13px;">
             <li class="nav-item"><a class="nav-link font-weight-normal" href="#h">Home</a></li>
             <li class="nav-item"><a class="nav-link font-weight-normal" href="#a">About</a></li>
             <li class="nav-item"><a class="nav-link font-weight-normal" href="#s">Service</a></li>
@@ -838,12 +815,22 @@ function downloadpdf() {
             <li class="nav-item"><a class="nav-link font-weight-normal" href="#c">Contact</a></li>
         </ul>
       </nav>
-      <div class="icons d-flex justify-content-around mb-5" style="gap: 20px;">
-                    <i class="bi bi-facebook h5"></i>
-                    <i class="bi bi-twitter h5"></i>
-                    <i class="bi bi-instagram h5"></i>
-                    <i class="bi bi-linkedin h5"></i>
-        </div>
+      <div class="row mt-3">
+      <div class="d-flex gap-3 justify-content-center mb-5">
+  <a href="https://www.facebook.com" target="_blank" class="text-decoration-none fs-3">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com" target="_blank" class="text-decoration-none  fs-3">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="text-decoration-none  fs-3">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none fs-3">
+    <i class="bi bi-linkedin"></i>
+  </a>
+      </div>
+    </div>
         <div class="copyright text-center text-light w-100" style="background: #545454;">
             <p class="p-1 m-0">
                 2023
