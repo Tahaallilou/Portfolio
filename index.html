@@ -403,7 +403,7 @@ body.dark-theme #p .btn ,{
 
   background-color: black;
   color: white;
-  border: 2px solid white; /* contrast */
+  border : 2px solid white; /* contrast */
 }
 
 body.dark-theme #p .btn:hover .wthemefooter {
@@ -504,80 +504,14 @@ body.dark-theme #scrollTopBtn {
 </head>
 <body>
 <div class="container">
-  <!-- <div class="home">
-  <div class="row ">
-  
-
-    <div class="navbar">
-      <a href="#"><img src="#" alt="photo"></a>
-        <a href="#h">Home</a>
-        <a href="#a">About Me</a>
-        <a href="#s">Services</a>
-        <a href="#c">Contact</a>
-        <a href="#p">Projects</a>
-        <a href="#t">Testimonials</a>
-        <a href="#"><button  onclick="downloadpdf()"> Download Cv</button></a>
-        <script>
-function downloadpdf() {
-  const link = document.createElement('a');
-  link.href = "/cvtaha.pdf";   // chemin du PDF
-  link.download = "cvtaha.pdf"; // nom du fichier téléchargé
-  link.click();
-} -->
-<!-- </script> -->
-    <!-- </div> -->
-    <!-- </div> -->
 
 
-
-
-
-
-<!-- ✅ Navbar Bootstrap Responsive avec ancres courtes
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Mon Portfolio</a>
-    
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-   
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#h">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#a">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#s">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#p">Projets</a></li>
-        <li class="nav-item"><a class="nav-link" href="#c">Contact</a></li>
-      </ul>
-      
-      <button class="btn btn-outline-light ms-lg-3" onclick="downloadpdf()">Télécharger CV</button>
-    </div>
-  </div>
-</nav>
-<script>
-function downloadpdf() {
-  const link = document.createElement('a');
-  link.href = "cvtaha.pdf";   // ton fichier PDF dans le même dossier
-  link.download = "cvtaha.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-</script> -->
-
-
-
-<!-- ✅ Navbar Bootstrap Responsive -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <!-- 🌙/☀️ Theme Toggle -->
     <button class="btn  me-3"  id="themeToggle">Light Theme</button>
 
-    <!-- Hamburger -->
+    <!-- burger -->
     <button class="navbar-toggler text-center p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FD6F00;" >
       <span class="bi bi-chevron-bar-down text-center clrnav" ></span>
@@ -606,8 +540,8 @@ document.getElementById("themeToggle").addEventListener("click", function() {
 
 function downloadpdf() {
   const link = document.createElement('a');
-  link.href = "cvtaha.pdf"; 
-  link.download = "cvtaha.pdf";
+  link.href = "CV.pdf"; 
+  link.download = "CV.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -733,50 +667,6 @@ function downloadpdf() {
 
 
 
-
-
-<!-- <div class="mt-5 projects">
-  <p style="font-weight:600 ; font-size: 65px; letter-spacing: 3%;" class="text-center">My projects</p>
-  <p style="font-weight: 400;font-size: 21px; letter-spacing: 3%;" class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus</p>
-  <div class="row  d-flex mt-5 text-center justify-content-evenly mx-5 espacebtn">
-    <div class="col-2 ">
-      <button id="projectbtn" > All </button>
-    </div>
-    <div class="col-2">
-      <button id="projectbtn" > Html/Css </button>
-    </div>
-    <div class="col-2">
-      <button id="projectbtn" > Data base </button>
-    </div>
-    <div class="col-2">
-      <button id="projectbtn" > Php </button>
-    </div>
-    <div class="col-2">
-      <button id="projectbtn" > Java script </button>
-    </div>
-  </div>
-  <div class="row mt-5 d-flex  justify-content-between  gap-5">
-    <div class="col-3">
-      <img src="Capture d’écran 2025-09-30 182245.png" alt="web design" style="height: 489px;width: 445px;">
-    </div>
-    <div class="col-3">
-      <img src="Capture d’écran 2025-09-30 182316.png" alt="web design" style="height: 489px;width: 445px;">
-    </div>
-    <div class="col-3">
-      <img src="Capture d’écran 2025-09-30 182707.png" alt="web design" style="height: 489px; width: 445px;">
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-        
-
-
-
-
         
 
 <article id="p" class="container d-flex flex-column justify-content-center align-items-center mt-5">
@@ -898,7 +788,7 @@ function downloadpdf() {
         <a href="https://facebook.com" target="_blank" class="mx-2"><i class="bi bi-facebook"></i></a>
         <a href="https://instagram.com" target="_blank" class="mx-2"><i class="bi bi-instagram"></i></a>
         <a href="https://twitter.com" target="_blank" class="mx-2"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.linkedin.com/in/mohamed-taha-allilou-55b1b71b2/" target="_blank" class="mx-2"><i class="bi bi-linkedin"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="mx-2"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
 
@@ -973,31 +863,6 @@ async function animation() {
     animation()
 }animation()
         </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
